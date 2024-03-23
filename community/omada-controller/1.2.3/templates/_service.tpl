@@ -45,12 +45,12 @@ service:
         primary: true
         port: {{ .Values.omadaNetwork.appDiscoveryPort }}
         nodePort: {{ .Values.omadaNetwork.appDiscoveryPort }}
-        protocol: udp
         targetSelector: omada
       discovery:
         enabled: true
         port: {{ .Values.omadaNetwork.discoveryPort }}
         nodePort: {{ .Values.omadaNetwork.discoveryPort }}
+        protocol: udp
         targetSelector: omada
 
   omada-devices:
