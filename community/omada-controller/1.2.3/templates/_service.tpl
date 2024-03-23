@@ -45,6 +45,7 @@ service:
         primary: true
         port: {{ .Values.omadaNetwork.appDiscoveryPort }}
         nodePort: {{ .Values.omadaNetwork.appDiscoveryPort }}
+        protocol: udp
         targetSelector: omada
       discovery:
         enabled: true
